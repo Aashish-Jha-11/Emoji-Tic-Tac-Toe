@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-900 to-slate-800 min-h-screen;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900;
+  }
+  
+  .btn-primary {
+    @apply bg-teal-500 text-white hover:bg-teal-600 focus:ring-teal-400;
+  }
+  
+  .btn-secondary {
+    @apply bg-cyan-500 text-white hover:bg-cyan-600 focus:ring-cyan-400;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-teal-500 text-teal-400 hover:bg-teal-500/10 focus:ring-teal-400;
+  }
+  
+  .card {
+    @apply bg-slate-800 rounded-xl shadow-lg shadow-black/20 border border-slate-700;
+  }
+  
+  .emoji-cell {
+    @apply flex items-center justify-center bg-slate-800 rounded-lg shadow-lg shadow-black/20 border border-slate-700 cursor-pointer transition-all duration-300;
+  }
+  
+  .emoji-cell-empty {
+    @apply hover:bg-slate-700;
+  }
+  
+  .emoji-cell-filled {
+    @apply cursor-not-allowed;
+  }
+  
+  .emoji-cell-winner {
+    @apply bg-teal-500/20 border-teal-400;
+  }
+}
